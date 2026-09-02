@@ -1,4 +1,4 @@
-﻿"""
+"""
 server/api.py
 =============
 Production-grade FastAPI server for the SIH Flood Nowcasting system.
@@ -213,7 +213,7 @@ def _series_to_alert_records(
     result_df: pd.DataFrame,
 ) -> list[AlertRecord]:
     """Extract HIGH-risk rows from the result DataFrame as AlertRecord objects."""
-    high_df = result_df[result_df["alert_level"] == "HIGH"]
+    high_df = result_df[result_df["alert_level"].isin(["HIGH", "MEDIUM"])]
     records: list[AlertRecord] = []
     for cell_id, row in high_df.iterrows():
         records.append(AlertRecord(
@@ -354,6 +354,45 @@ async def simulate(request: SimulateRequest) -> SimulateResponse:
     try:
         # Step 3: Dynamic risk fusion
         result_df = app.state.fusion.evaluate(df_fused, ml_probs)
+        
+        import numpy as np
+        
+        # 1. Overwrite rainfall
+        result_df["rainfall_1h_mm"] = scenario_mm
+        
+        # Ensure ml_probs is aligned (assuming 1D or 2nd col of 2D)
+        probs = np.array(ml_probs)
+        if probs.ndim == 2:
+            probs = probs[:, 1]
+            
+        # 2. Dynamic Risk Formula
+        base_prob = probs * 50.0
+        rain_factor = min(50.0, (scenario_mm / 200.0) * 50.0)
+        river_factor = np.maximum(0.0, (5000.0 - result_df["dist_to_river_m"]) / 5000.0) * 20.0
+        elev_factor = np.maximum(0.0, (60.0 - result_df["elevation_m"]) / 60.0) * 15.0
+        
+        risk_score = base_prob + rain_factor + river_factor + elev_factor
+        result_df["risk_score"] = np.clip(risk_score, 0, 100)
+        
+        # 3. Categorize cells
+        conditions = [
+            (result_df["risk_score"] >= 70),
+            (result_df["risk_score"] >= 40) & (result_df["risk_score"] < 70)
+        ]
+        choices = ["HIGH", "MEDIUM"]
+        result_df["alert_level"] = np.select(conditions, choices, default="LOW")
+        
+        # 4. Estimate time_to_flood_hrs
+        high_ttf = round(max(0.5, 6.0 - (scenario_mm / 50.0)), 1)
+        med_ttf = round(max(2.0, 10.0 - (scenario_mm / 40.0)), 1)
+        
+        ttf_conditions = [
+            result_df["alert_level"] == "HIGH",
+            result_df["alert_level"] == "MEDIUM"
+        ]
+        ttf_choices = [high_ttf, med_ttf]
+        result_df["time_to_flood_hrs"] = np.select(ttf_conditions, ttf_choices, default=np.nan)
+
     except Exception as exc:
         log.error("Risk fusion failed: %s", exc)
         raise HTTPException(

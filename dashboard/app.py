@@ -65,8 +65,14 @@ html, body, [data-testid="stAppViewContainer"] {
 [data-testid="stSidebar"] {
     background: #0D1321 !important;
     border-right: 1px solid #1E2D45 !important;
+    display: block !important;
 }
 [data-testid="stHeader"] { background: transparent !important; }
+[data-testid="collapsedControl"], [data-testid="stSidebarCollapseButton"], button[kind="header"] {
+    display: block !important;
+    z-index: 999999 !important;
+    color: #06B6D4 !important;
+}
 
 /* ── Hide Streamlit chrome ── */
 #MainMenu, footer, [data-testid="stDeployButton"],
@@ -521,40 +527,20 @@ if not api_live:
     </div>
     """, unsafe_allow_html=True)
 
-# ── Sidebar ────────────────────────────────────────────────────────────────
-with st.sidebar:
-    st.markdown("### ⚙ Dynamic Simulation Parameters")
+# ── Simulation Controls ────────────────────────────────────────────────────
+with st.expander("⚙ Dynamic Simulation & Sensor Telemetry Override", expanded=True):
+    c1, c2, c3 = st.columns([2, 2, 1])
+    with c1:
+        scenario_mm = st.slider("Precipitation Surge Intensity (mm/hr)", min_value=0, max_value=250, value=190, step=5)
+    with c2:
+        hydro_model = st.selectbox("Hydrological Model", ["Standard Monsoon Runoff (Baseline)", "Severe Cloudburst Event (+6h Forecast)", "Dam Breach / River Swell Surge (+24h Multi-Day)"])
+    with c3:
+        st.write("") # vertical spacing
+        st.write("")
+        execute = st.button("⚡ EXECUTE INFERENCE", disabled=not api_live, use_container_width=True)
 
-    scenario_mm = st.slider(
-        "Precipitation Surge Intensity (mm/hr)",
-        min_value=0, max_value=250, value=85, step=5,
-        help="1-hour rainfall accumulation fed to the ML risk engine.",
-    )
-
-    hydro_model = st.radio(
-        "Hydrological Scenario Model",
-        options=[
-            "Standard Monsoon Runoff (Baseline)",
-            "Severe Cloudburst Event (+6h Forecast)",
-            "Dam Breach / River Swell Surge (+24h Multi-Day)",
-        ],
-        index=0,
-    )
-
-    execute = st.button("⚡ EXECUTE DYNAMIC RISK INFERENCE", disabled=not api_live)
-
-    st.markdown("<div class='section-sep'></div>", unsafe_allow_html=True)
-    st.markdown("### 🗺 GIS Layer Toggles")
-
-    show_shelters   = st.checkbox("Show Emergency Relief Shelters",    value=True)
-    show_inundation = st.checkbox("Display River Inundation Buffer",   value=True)
-
-    st.markdown("<div class='section-sep'></div>", unsafe_allow_html=True)
-    st.markdown(
-        "<span style='font-size:0.68rem;color:#334155'>HydroShield v1.0 · SIH 2025 · "
-        "Patna Flood Nowcasting</span>",
-        unsafe_allow_html=True,
-    )
+show_shelters = True
+show_inundation = True
 
 # ── Session state: last simulation result ──────────────────────────────────
 if "sim_result" not in st.session_state:
