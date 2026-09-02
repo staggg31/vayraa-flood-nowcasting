@@ -1,0 +1,2508 @@
+{
+  "type": "FeatureCollection",
+  "name": "patna_flood_grid",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.554100000000002
+            ],
+            [
+              85.1076,
+              25.554100000000002
+            ],
+            [
+              85.1076,
+              25.564100000000003
+            ],
+            [
+              85.0976,
+              25.564100000000003
+            ],
+            [
+              85.0976,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_001",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 71.16,
+        "slope_deg": 2.344,
+        "drainage_density": 0.335,
+        "impervious_surface_ratio": 0.5109,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.554100000000002
+            ],
+            [
+              85.11760000000001,
+              25.554100000000002
+            ],
+            [
+              85.11760000000001,
+              25.564100000000003
+            ],
+            [
+              85.1076,
+              25.564100000000003
+            ],
+            [
+              85.1076,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_002",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 71.87,
+        "slope_deg": 2.394,
+        "drainage_density": 0.394,
+        "impervious_surface_ratio": 0.6195,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.554100000000002
+            ],
+            [
+              85.1276,
+              25.554100000000002
+            ],
+            [
+              85.1276,
+              25.564100000000003
+            ],
+            [
+              85.1176,
+              25.564100000000003
+            ],
+            [
+              85.1176,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_003",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 71.31,
+        "slope_deg": 2.477,
+        "drainage_density": 0.235,
+        "impervious_surface_ratio": 0.7529,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.554100000000002
+            ],
+            [
+              85.1376,
+              25.554100000000002
+            ],
+            [
+              85.1376,
+              25.564100000000003
+            ],
+            [
+              85.1276,
+              25.564100000000003
+            ],
+            [
+              85.1276,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_004",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 71.77,
+        "slope_deg": 2.386,
+        "drainage_density": 0.549,
+        "impervious_surface_ratio": 0.8449,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.554100000000002
+            ],
+            [
+              85.14760000000001,
+              25.554100000000002
+            ],
+            [
+              85.14760000000001,
+              25.564100000000003
+            ],
+            [
+              85.1376,
+              25.564100000000003
+            ],
+            [
+              85.1376,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_005",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 71.43,
+        "slope_deg": 2.216,
+        "drainage_density": 0.361,
+        "impervious_surface_ratio": 0.8487,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.554100000000002
+            ],
+            [
+              85.1576,
+              25.554100000000002
+            ],
+            [
+              85.1576,
+              25.564100000000003
+            ],
+            [
+              85.1476,
+              25.564100000000003
+            ],
+            [
+              85.1476,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_006",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 72.05,
+        "slope_deg": 2.399,
+        "drainage_density": 0.564,
+        "impervious_surface_ratio": 0.7445,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.554100000000002
+            ],
+            [
+              85.16760000000001,
+              25.554100000000002
+            ],
+            [
+              85.16760000000001,
+              25.564100000000003
+            ],
+            [
+              85.1576,
+              25.564100000000003
+            ],
+            [
+              85.1576,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_007",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 71.45,
+        "slope_deg": 2.209,
+        "drainage_density": 0.439,
+        "impervious_surface_ratio": 0.6686,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.554100000000002
+            ],
+            [
+              85.1776,
+              25.554100000000002
+            ],
+            [
+              85.1776,
+              25.564100000000003
+            ],
+            [
+              85.1676,
+              25.564100000000003
+            ],
+            [
+              85.1676,
+              25.554100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_008",
+        "dist_to_river_m": 8349.0,
+        "elevation_m": 71.16,
+        "slope_deg": 2.427,
+        "drainage_density": 0.57,
+        "impervious_surface_ratio": 0.4512,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.564100000000003
+            ],
+            [
+              85.1076,
+              25.564100000000003
+            ],
+            [
+              85.1076,
+              25.574100000000005
+            ],
+            [
+              85.0976,
+              25.574100000000005
+            ],
+            [
+              85.0976,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_009",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 67.29,
+        "slope_deg": 2.043,
+        "drainage_density": 0.499,
+        "impervious_surface_ratio": 0.496,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.564100000000003
+            ],
+            [
+              85.11760000000001,
+              25.564100000000003
+            ],
+            [
+              85.11760000000001,
+              25.574100000000005
+            ],
+            [
+              85.1076,
+              25.574100000000005
+            ],
+            [
+              85.1076,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_010",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 67.48,
+        "slope_deg": 2.138,
+        "drainage_density": 0.662,
+        "impervious_surface_ratio": 0.6493,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.564100000000003
+            ],
+            [
+              85.1276,
+              25.564100000000003
+            ],
+            [
+              85.1276,
+              25.574100000000005
+            ],
+            [
+              85.1176,
+              25.574100000000005
+            ],
+            [
+              85.1176,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_011",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 67.14,
+        "slope_deg": 2.123,
+        "drainage_density": 0.515,
+        "impervious_surface_ratio": 0.7878,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.564100000000003
+            ],
+            [
+              85.1376,
+              25.564100000000003
+            ],
+            [
+              85.1376,
+              25.574100000000005
+            ],
+            [
+              85.1276,
+              25.574100000000005
+            ],
+            [
+              85.1276,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_012",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 67.1,
+        "slope_deg": 2.15,
+        "drainage_density": 0.474,
+        "impervious_surface_ratio": 0.8494,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.564100000000003
+            ],
+            [
+              85.14760000000001,
+              25.564100000000003
+            ],
+            [
+              85.14760000000001,
+              25.574100000000005
+            ],
+            [
+              85.1376,
+              25.574100000000005
+            ],
+            [
+              85.1376,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_013",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 67.9,
+        "slope_deg": 2.063,
+        "drainage_density": 0.631,
+        "impervious_surface_ratio": 0.7617,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.564100000000003
+            ],
+            [
+              85.1576,
+              25.564100000000003
+            ],
+            [
+              85.1576,
+              25.574100000000005
+            ],
+            [
+              85.1476,
+              25.574100000000005
+            ],
+            [
+              85.1476,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_014",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 66.62,
+        "slope_deg": 2.076,
+        "drainage_density": 0.534,
+        "impervious_surface_ratio": 0.7447,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.564100000000003
+            ],
+            [
+              85.16760000000001,
+              25.564100000000003
+            ],
+            [
+              85.16760000000001,
+              25.574100000000005
+            ],
+            [
+              85.1576,
+              25.574100000000005
+            ],
+            [
+              85.1576,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_015",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 67.56,
+        "slope_deg": 2.305,
+        "drainage_density": 0.759,
+        "impervious_surface_ratio": 0.6071,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.564100000000003
+            ],
+            [
+              85.1776,
+              25.564100000000003
+            ],
+            [
+              85.1776,
+              25.574100000000005
+            ],
+            [
+              85.1676,
+              25.574100000000005
+            ],
+            [
+              85.1676,
+              25.564100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_016",
+        "dist_to_river_m": 7235.8,
+        "elevation_m": 67.86,
+        "slope_deg": 2.168,
+        "drainage_density": 0.514,
+        "impervious_surface_ratio": 0.4773,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.5741
+            ],
+            [
+              85.1076,
+              25.5741
+            ],
+            [
+              85.1076,
+              25.584100000000003
+            ],
+            [
+              85.0976,
+              25.584100000000003
+            ],
+            [
+              85.0976,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_017",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 63.14,
+        "slope_deg": 1.755,
+        "drainage_density": 0.825,
+        "impervious_surface_ratio": 0.5323,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.5741
+            ],
+            [
+              85.11760000000001,
+              25.5741
+            ],
+            [
+              85.11760000000001,
+              25.584100000000003
+            ],
+            [
+              85.1076,
+              25.584100000000003
+            ],
+            [
+              85.1076,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_018",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 63.19,
+        "slope_deg": 1.904,
+        "drainage_density": 0.628,
+        "impervious_surface_ratio": 0.6294,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.5741
+            ],
+            [
+              85.1276,
+              25.5741
+            ],
+            [
+              85.1276,
+              25.584100000000003
+            ],
+            [
+              85.1176,
+              25.584100000000003
+            ],
+            [
+              85.1176,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_019",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 63.86,
+        "slope_deg": 1.874,
+        "drainage_density": 0.908,
+        "impervious_surface_ratio": 0.7218,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.5741
+            ],
+            [
+              85.1376,
+              25.5741
+            ],
+            [
+              85.1376,
+              25.584100000000003
+            ],
+            [
+              85.1276,
+              25.584100000000003
+            ],
+            [
+              85.1276,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_020",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 63.5,
+        "slope_deg": 1.907,
+        "drainage_density": 0.98,
+        "impervious_surface_ratio": 0.7913,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.5741
+            ],
+            [
+              85.14760000000001,
+              25.5741
+            ],
+            [
+              85.14760000000001,
+              25.584100000000003
+            ],
+            [
+              85.1376,
+              25.584100000000003
+            ],
+            [
+              85.1376,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_021",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 64.07,
+        "slope_deg": 1.796,
+        "drainage_density": 0.864,
+        "impervious_surface_ratio": 0.7618,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.5741
+            ],
+            [
+              85.1576,
+              25.5741
+            ],
+            [
+              85.1576,
+              25.584100000000003
+            ],
+            [
+              85.1476,
+              25.584100000000003
+            ],
+            [
+              85.1476,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_022",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 63.36,
+        "slope_deg": 1.866,
+        "drainage_density": 0.773,
+        "impervious_surface_ratio": 0.7621,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.5741
+            ],
+            [
+              85.16760000000001,
+              25.5741
+            ],
+            [
+              85.16760000000001,
+              25.584100000000003
+            ],
+            [
+              85.1576,
+              25.584100000000003
+            ],
+            [
+              85.1576,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_023",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 63.65,
+        "slope_deg": 1.73,
+        "drainage_density": 0.792,
+        "impervious_surface_ratio": 0.6684,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.5741
+            ],
+            [
+              85.1776,
+              25.5741
+            ],
+            [
+              85.1776,
+              25.584100000000003
+            ],
+            [
+              85.1676,
+              25.584100000000003
+            ],
+            [
+              85.1676,
+              25.5741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_024",
+        "dist_to_river_m": 6122.6,
+        "elevation_m": 64.23,
+        "slope_deg": 1.742,
+        "drainage_density": 0.835,
+        "impervious_surface_ratio": 0.5545,
+        "historical_flood_count": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.584100000000003
+            ],
+            [
+              85.1076,
+              25.584100000000003
+            ],
+            [
+              85.1076,
+              25.594100000000005
+            ],
+            [
+              85.0976,
+              25.594100000000005
+            ],
+            [
+              85.0976,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_025",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 59.57,
+        "slope_deg": 1.372,
+        "drainage_density": 1.086,
+        "impervious_surface_ratio": 0.4987,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.584100000000003
+            ],
+            [
+              85.11760000000001,
+              25.584100000000003
+            ],
+            [
+              85.11760000000001,
+              25.594100000000005
+            ],
+            [
+              85.1076,
+              25.594100000000005
+            ],
+            [
+              85.1076,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_026",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 59.53,
+        "slope_deg": 1.725,
+        "drainage_density": 1.126,
+        "impervious_surface_ratio": 0.6414,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.584100000000003
+            ],
+            [
+              85.1276,
+              25.584100000000003
+            ],
+            [
+              85.1276,
+              25.594100000000005
+            ],
+            [
+              85.1176,
+              25.594100000000005
+            ],
+            [
+              85.1176,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_027",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 59.48,
+        "slope_deg": 1.529,
+        "drainage_density": 1.126,
+        "impervious_surface_ratio": 0.7505,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.584100000000003
+            ],
+            [
+              85.1376,
+              25.584100000000003
+            ],
+            [
+              85.1376,
+              25.594100000000005
+            ],
+            [
+              85.1276,
+              25.594100000000005
+            ],
+            [
+              85.1276,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_028",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 59.48,
+        "slope_deg": 1.65,
+        "drainage_density": 1.081,
+        "impervious_surface_ratio": 0.821,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.584100000000003
+            ],
+            [
+              85.14760000000001,
+              25.584100000000003
+            ],
+            [
+              85.14760000000001,
+              25.594100000000005
+            ],
+            [
+              85.1376,
+              25.594100000000005
+            ],
+            [
+              85.1376,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_029",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 59.03,
+        "slope_deg": 1.516,
+        "drainage_density": 0.881,
+        "impervious_surface_ratio": 0.8217,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.584100000000003
+            ],
+            [
+              85.1576,
+              25.584100000000003
+            ],
+            [
+              85.1576,
+              25.594100000000005
+            ],
+            [
+              85.1476,
+              25.594100000000005
+            ],
+            [
+              85.1476,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_030",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 59.23,
+        "slope_deg": 1.34,
+        "drainage_density": 0.855,
+        "impervious_surface_ratio": 0.7187,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.584100000000003
+            ],
+            [
+              85.16760000000001,
+              25.584100000000003
+            ],
+            [
+              85.16760000000001,
+              25.594100000000005
+            ],
+            [
+              85.1576,
+              25.594100000000005
+            ],
+            [
+              85.1576,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_031",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 60.11,
+        "slope_deg": 1.492,
+        "drainage_density": 0.95,
+        "impervious_surface_ratio": 0.61,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.584100000000003
+            ],
+            [
+              85.1776,
+              25.584100000000003
+            ],
+            [
+              85.1776,
+              25.594100000000005
+            ],
+            [
+              85.1676,
+              25.594100000000005
+            ],
+            [
+              85.1676,
+              25.584100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_032",
+        "dist_to_river_m": 5009.4,
+        "elevation_m": 59.51,
+        "slope_deg": 1.427,
+        "drainage_density": 0.867,
+        "impervious_surface_ratio": 0.5453,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.5941
+            ],
+            [
+              85.1076,
+              25.5941
+            ],
+            [
+              85.1076,
+              25.604100000000003
+            ],
+            [
+              85.0976,
+              25.604100000000003
+            ],
+            [
+              85.0976,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_033",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 56.15,
+        "slope_deg": 1.269,
+        "drainage_density": 1.05,
+        "impervious_surface_ratio": 0.5657,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.5941
+            ],
+            [
+              85.11760000000001,
+              25.5941
+            ],
+            [
+              85.11760000000001,
+              25.604100000000003
+            ],
+            [
+              85.1076,
+              25.604100000000003
+            ],
+            [
+              85.1076,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_034",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 55.19,
+        "slope_deg": 1.22,
+        "drainage_density": 1.044,
+        "impervious_surface_ratio": 0.6895,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.5941
+            ],
+            [
+              85.1276,
+              25.5941
+            ],
+            [
+              85.1276,
+              25.604100000000003
+            ],
+            [
+              85.1176,
+              25.604100000000003
+            ],
+            [
+              85.1176,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_035",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 56.11,
+        "slope_deg": 1.157,
+        "drainage_density": 1.147,
+        "impervious_surface_ratio": 0.7502,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.5941
+            ],
+            [
+              85.1376,
+              25.5941
+            ],
+            [
+              85.1376,
+              25.604100000000003
+            ],
+            [
+              85.1276,
+              25.604100000000003
+            ],
+            [
+              85.1276,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_036",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 54.93,
+        "slope_deg": 1.296,
+        "drainage_density": 1.128,
+        "impervious_surface_ratio": 0.8168,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.5941
+            ],
+            [
+              85.14760000000001,
+              25.5941
+            ],
+            [
+              85.14760000000001,
+              25.604100000000003
+            ],
+            [
+              85.1376,
+              25.604100000000003
+            ],
+            [
+              85.1376,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_037",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 55.56,
+        "slope_deg": 1.06,
+        "drainage_density": 1.352,
+        "impervious_surface_ratio": 0.8256,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.5941
+            ],
+            [
+              85.1576,
+              25.5941
+            ],
+            [
+              85.1576,
+              25.604100000000003
+            ],
+            [
+              85.1476,
+              25.604100000000003
+            ],
+            [
+              85.1476,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_038",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 55.87,
+        "slope_deg": 1.257,
+        "drainage_density": 1.034,
+        "impervious_surface_ratio": 0.7114,
+        "historical_flood_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.5941
+            ],
+            [
+              85.16760000000001,
+              25.5941
+            ],
+            [
+              85.16760000000001,
+              25.604100000000003
+            ],
+            [
+              85.1576,
+              25.604100000000003
+            ],
+            [
+              85.1576,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_039",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 55.35,
+        "slope_deg": 1.247,
+        "drainage_density": 1.058,
+        "impervious_surface_ratio": 0.6685,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.5941
+            ],
+            [
+              85.1776,
+              25.5941
+            ],
+            [
+              85.1776,
+              25.604100000000003
+            ],
+            [
+              85.1676,
+              25.604100000000003
+            ],
+            [
+              85.1676,
+              25.5941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_040",
+        "dist_to_river_m": 3896.2,
+        "elevation_m": 55.44,
+        "slope_deg": 1.178,
+        "drainage_density": 1.358,
+        "impervious_surface_ratio": 0.496,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.604100000000003
+            ],
+            [
+              85.1076,
+              25.604100000000003
+            ],
+            [
+              85.1076,
+              25.614100000000004
+            ],
+            [
+              85.0976,
+              25.614100000000004
+            ],
+            [
+              85.0976,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_041",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 52.64,
+        "slope_deg": 0.876,
+        "drainage_density": 1.481,
+        "impervious_surface_ratio": 0.5232,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.604100000000003
+            ],
+            [
+              85.11760000000001,
+              25.604100000000003
+            ],
+            [
+              85.11760000000001,
+              25.614100000000004
+            ],
+            [
+              85.1076,
+              25.614100000000004
+            ],
+            [
+              85.1076,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_042",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 52.14,
+        "slope_deg": 0.892,
+        "drainage_density": 1.293,
+        "impervious_surface_ratio": 0.6383,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.604100000000003
+            ],
+            [
+              85.1276,
+              25.604100000000003
+            ],
+            [
+              85.1276,
+              25.614100000000004
+            ],
+            [
+              85.1176,
+              25.614100000000004
+            ],
+            [
+              85.1176,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_043",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 51.67,
+        "slope_deg": 1.095,
+        "drainage_density": 1.324,
+        "impervious_surface_ratio": 0.6456,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.604100000000003
+            ],
+            [
+              85.1376,
+              25.604100000000003
+            ],
+            [
+              85.1376,
+              25.614100000000004
+            ],
+            [
+              85.1276,
+              25.614100000000004
+            ],
+            [
+              85.1276,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_044",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 52.21,
+        "slope_deg": 0.771,
+        "drainage_density": 1.204,
+        "impervious_surface_ratio": 0.7706,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.604100000000003
+            ],
+            [
+              85.14760000000001,
+              25.604100000000003
+            ],
+            [
+              85.14760000000001,
+              25.614100000000004
+            ],
+            [
+              85.1376,
+              25.614100000000004
+            ],
+            [
+              85.1376,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_045",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 52.26,
+        "slope_deg": 0.895,
+        "drainage_density": 1.359,
+        "impervious_surface_ratio": 0.7923,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.604100000000003
+            ],
+            [
+              85.1576,
+              25.604100000000003
+            ],
+            [
+              85.1576,
+              25.614100000000004
+            ],
+            [
+              85.1476,
+              25.614100000000004
+            ],
+            [
+              85.1476,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_046",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 51.6,
+        "slope_deg": 0.725,
+        "drainage_density": 1.205,
+        "impervious_surface_ratio": 0.7331,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.604100000000003
+            ],
+            [
+              85.16760000000001,
+              25.604100000000003
+            ],
+            [
+              85.16760000000001,
+              25.614100000000004
+            ],
+            [
+              85.1576,
+              25.614100000000004
+            ],
+            [
+              85.1576,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_047",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 51.97,
+        "slope_deg": 0.951,
+        "drainage_density": 1.38,
+        "impervious_surface_ratio": 0.6169,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.604100000000003
+            ],
+            [
+              85.1776,
+              25.604100000000003
+            ],
+            [
+              85.1776,
+              25.614100000000004
+            ],
+            [
+              85.1676,
+              25.614100000000004
+            ],
+            [
+              85.1676,
+              25.604100000000003
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_048",
+        "dist_to_river_m": 2783.0,
+        "elevation_m": 51.48,
+        "slope_deg": 0.978,
+        "drainage_density": 1.379,
+        "impervious_surface_ratio": 0.4809,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.6141
+            ],
+            [
+              85.1076,
+              25.6141
+            ],
+            [
+              85.1076,
+              25.624100000000002
+            ],
+            [
+              85.0976,
+              25.624100000000002
+            ],
+            [
+              85.0976,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_049",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 47.38,
+        "slope_deg": 0.697,
+        "drainage_density": 1.534,
+        "impervious_surface_ratio": 0.5248,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.6141
+            ],
+            [
+              85.11760000000001,
+              25.6141
+            ],
+            [
+              85.11760000000001,
+              25.624100000000002
+            ],
+            [
+              85.1076,
+              25.624100000000002
+            ],
+            [
+              85.1076,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_050",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 47.74,
+        "slope_deg": 0.639,
+        "drainage_density": 1.594,
+        "impervious_surface_ratio": 0.6702,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.6141
+            ],
+            [
+              85.1276,
+              25.6141
+            ],
+            [
+              85.1276,
+              25.624100000000002
+            ],
+            [
+              85.1176,
+              25.624100000000002
+            ],
+            [
+              85.1176,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_051",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 47.57,
+        "slope_deg": 0.785,
+        "drainage_density": 1.354,
+        "impervious_surface_ratio": 0.5955,
+        "historical_flood_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.6141
+            ],
+            [
+              85.1376,
+              25.6141
+            ],
+            [
+              85.1376,
+              25.624100000000002
+            ],
+            [
+              85.1276,
+              25.624100000000002
+            ],
+            [
+              85.1276,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_052",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 48.22,
+        "slope_deg": 0.694,
+        "drainage_density": 1.431,
+        "impervious_surface_ratio": 0.8048,
+        "historical_flood_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.6141
+            ],
+            [
+              85.14760000000001,
+              25.6141
+            ],
+            [
+              85.14760000000001,
+              25.624100000000002
+            ],
+            [
+              85.1376,
+              25.624100000000002
+            ],
+            [
+              85.1376,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_053",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 48.45,
+        "slope_deg": 0.492,
+        "drainage_density": 1.473,
+        "impervious_surface_ratio": 0.834,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.6141
+            ],
+            [
+              85.1576,
+              25.6141
+            ],
+            [
+              85.1576,
+              25.624100000000002
+            ],
+            [
+              85.1476,
+              25.624100000000002
+            ],
+            [
+              85.1476,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_054",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 48.48,
+        "slope_deg": 0.407,
+        "drainage_density": 1.587,
+        "impervious_surface_ratio": 0.6583,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.6141
+            ],
+            [
+              85.16760000000001,
+              25.6141
+            ],
+            [
+              85.16760000000001,
+              25.624100000000002
+            ],
+            [
+              85.1576,
+              25.624100000000002
+            ],
+            [
+              85.1576,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_055",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 47.98,
+        "slope_deg": 0.555,
+        "drainage_density": 1.59,
+        "impervious_surface_ratio": 0.6501,
+        "historical_flood_count": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.6141
+            ],
+            [
+              85.1776,
+              25.6141
+            ],
+            [
+              85.1776,
+              25.624100000000002
+            ],
+            [
+              85.1676,
+              25.624100000000002
+            ],
+            [
+              85.1676,
+              25.6141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_056",
+        "dist_to_river_m": 1669.8,
+        "elevation_m": 47.76,
+        "slope_deg": 0.731,
+        "drainage_density": 1.434,
+        "impervious_surface_ratio": 0.5316,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0976,
+              25.624100000000002
+            ],
+            [
+              85.1076,
+              25.624100000000002
+            ],
+            [
+              85.1076,
+              25.634100000000004
+            ],
+            [
+              85.0976,
+              25.634100000000004
+            ],
+            [
+              85.0976,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_057",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 43.89,
+        "slope_deg": 0.278,
+        "drainage_density": 1.762,
+        "impervious_surface_ratio": 0.4959,
+        "historical_flood_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1076,
+              25.624100000000002
+            ],
+            [
+              85.11760000000001,
+              25.624100000000002
+            ],
+            [
+              85.11760000000001,
+              25.634100000000004
+            ],
+            [
+              85.1076,
+              25.634100000000004
+            ],
+            [
+              85.1076,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_058",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 44.41,
+        "slope_deg": 0.369,
+        "drainage_density": 1.678,
+        "impervious_surface_ratio": 0.6157,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1176,
+              25.624100000000002
+            ],
+            [
+              85.1276,
+              25.624100000000002
+            ],
+            [
+              85.1276,
+              25.634100000000004
+            ],
+            [
+              85.1176,
+              25.634100000000004
+            ],
+            [
+              85.1176,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_059",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 44.63,
+        "slope_deg": 0.348,
+        "drainage_density": 1.763,
+        "impervious_surface_ratio": 0.7296,
+        "historical_flood_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1276,
+              25.624100000000002
+            ],
+            [
+              85.1376,
+              25.624100000000002
+            ],
+            [
+              85.1376,
+              25.634100000000004
+            ],
+            [
+              85.1276,
+              25.634100000000004
+            ],
+            [
+              85.1276,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_060",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 44.6,
+        "slope_deg": 0.332,
+        "drainage_density": 1.538,
+        "impervious_surface_ratio": 0.7949,
+        "historical_flood_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1376,
+              25.624100000000002
+            ],
+            [
+              85.14760000000001,
+              25.624100000000002
+            ],
+            [
+              85.14760000000001,
+              25.634100000000004
+            ],
+            [
+              85.1376,
+              25.634100000000004
+            ],
+            [
+              85.1376,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_061",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 44.36,
+        "slope_deg": 0.273,
+        "drainage_density": 1.842,
+        "impervious_surface_ratio": 0.7728,
+        "historical_flood_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1476,
+              25.624100000000002
+            ],
+            [
+              85.1576,
+              25.624100000000002
+            ],
+            [
+              85.1576,
+              25.634100000000004
+            ],
+            [
+              85.1476,
+              25.634100000000004
+            ],
+            [
+              85.1476,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_062",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 43.84,
+        "slope_deg": 0.267,
+        "drainage_density": 1.827,
+        "impervious_surface_ratio": 0.8145,
+        "historical_flood_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1576,
+              25.624100000000002
+            ],
+            [
+              85.16760000000001,
+              25.624100000000002
+            ],
+            [
+              85.16760000000001,
+              25.634100000000004
+            ],
+            [
+              85.1576,
+              25.634100000000004
+            ],
+            [
+              85.1576,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_063",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 44.17,
+        "slope_deg": 0.303,
+        "drainage_density": 1.608,
+        "impervious_surface_ratio": 0.6858,
+        "historical_flood_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.1676,
+              25.624100000000002
+            ],
+            [
+              85.1776,
+              25.624100000000002
+            ],
+            [
+              85.1776,
+              25.634100000000004
+            ],
+            [
+              85.1676,
+              25.634100000000004
+            ],
+            [
+              85.1676,
+              25.624100000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "CELL_064",
+        "dist_to_river_m": 556.6,
+        "elevation_m": 44.37,
+        "slope_deg": 0.228,
+        "drainage_density": 1.57,
+        "impervious_surface_ratio": 0.5309,
+        "historical_flood_count": 4
+      }
+    }
+  ]
+}
