@@ -1,0 +1,6 @@
+
+data/raw/*.zip
+data/raw/*.tar.gz
+data/raw/*.grib
+__pycache__/
+*.pyc

@@ -1,0 +1,57 @@
+﻿{
+ "displayFieldName": "Name",
+ "fieldAliases": {
+  "OID": "OID",
+  "Name": "Name",
+  "FolderPath": "FolderPath",
+  "SymbolID": "SymbolID",
+  "AltMode": "AltMode",
+  "Base": "Base",
+  "Snippet": "Snippet",
+  "PopupInfo": "PopupInfo",
+  "HasLabel": "HasLabel",
+  "LabelID": "LabelID"
+ },
+ "geometryType": "esriGeometryPoint",
+ "spatialReference": {
+  "wkid": 4326,
+  "latestWkid": 4326
+ },
+ "fields": [
+  {"name": "OID", "type": "esriFieldTypeOID", "alias": "OID"},
+  {"name": "Name", "type": "esriFieldTypeString", "alias": "Name", "length": 255},
+  {"name": "FolderPath", "type": "esriFieldTypeString", "alias": "FolderPath", "length": 255},
+  {"name": "SymbolID", "type": "esriFieldTypeInteger", "alias": "SymbolID"},
+  {"name": "AltMode", "type": "esriFieldTypeSmallInteger", "alias": "AltMode"},
+  {"name": "Base", "type": "esriFieldTypeDouble", "alias": "Base"},
+  {"name": "Snippet", "type": "esriFieldTypeString", "alias": "Snippet", "length": 268435455},
+  {"name": "PopupInfo", "type": "esriFieldTypeString", "alias": "PopupInfo", "length": 268435455},
+  {"name": "HasLabel", "type": "esriFieldTypeSmallInteger", "alias": "HasLabel"},
+  {"name": "LabelID", "type": "esriFieldTypeInteger", "alias": "LabelID"}
+ ],
+ "features": [
+  {"attributes": {"OID": 1, "Name": "BALKAMPET RUB", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.451292867000063, "y": 17.448776054000064}},
+  {"attributes": {"OID": 2, "Name": "NEAR APOLLO CRADLE HOSPITAL , ROAD NO 12", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.41964021900003, "y": 17.41601634500006}},
+  {"attributes": {"OID": 3, "Name": "NEAR TAPADIA DIAGNOSTIC CENTRE, CHIKKADPALLY", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.497114264000061, "y": 17.407571075000078}},
+  {"attributes": {"OID": 4, "Name": "FIZA HOTEL,BHAHADURPURA X ROADS", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.454231245000074, "y": 17.355292236000025}},
+  {"attributes": {"OID": 5, "Name": "OPP BEGUM BAZAR POLICE STATION", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.47520357500008, "y": 17.379778402000056}},
+  {"attributes": {"OID": 6, "Name": "RETHIBOWLI JUNCTION", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.431077834000064, "y": 17.395533015000069}},
+  {"attributes": {"OID": 7, "Name": "NEAR GALAXY THEATRE,TOLICHOWKI", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.410735308000085, "y": 17.402771021000035}},
+  {"attributes": {"OID": 8, "Name": "LAKDIKAPUL", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.464495499000066, "y": 17.404140093000024}},
+  {"attributes": {"OID": 9, "Name": "Bombay Hotel, Ranigunj", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.488477682000052, "y": 17.432478447000051}},
+  {"attributes": {"OID": 10, "Name": "MODEL HOUSE, PUNJAGUTTA", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.453587046000052, "y": 17.424452310000049}},
+  {"attributes": {"OID": 11, "Name": "LAKE VIEW GUEST HOUSE", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.460813639000037, "y": 17.416228709000052}},
+  {"attributes": {"OID": 12, "Name": "VILLA MARY COLLEGE , RAJBHAVAN ROAD", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.460300971000038, "y": 17.421284709000076}},
+  {"attributes": {"OID": 13, "Name": "KCP JUNCTION ,NEAR RTA OFFICE,KHAIRATHABAD", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.457065810000074, "y": 17.417478603000063}},
+  {"attributes": {"OID": 14, "Name": "NEERU'S SHOWROOM ROAD NO 36,BANJARAHILLS", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.399523474000034, "y": 17.438652933000071}},
+  {"attributes": {"OID": 15, "Name": "MINERVA HOTEL,HIMAYATHNAGAR", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.48548390600007, "y": 17.401406896000026}},
+  {"attributes": {"OID": 16, "Name": "OLIPHANT BRIDGE,CHILKALGUDA X ROADS", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.505944563000071, "y": 17.433646469000053}},
+  {"attributes": {"OID": 17, "Name": "NAMPALLY T JUMCTION", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.470026799000038, "y": 17.392302073000053}},
+  {"attributes": {"OID": 18, "Name": "OPP MEDIVISION EYE HOSPITAL, NMDC", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.447947609000039, "y": 17.399061938000045}},
+  {"attributes": {"OID": 19, "Name": "MOGHAL ENGINEERING COLLEGE,BANDLAGUDA", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.459953201000076, "y": 17.314368804000026}},
+  {"attributes": {"OID": 20, "Name": "MALAKPET GUNJ", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.504616846000033, "y": 17.373301287000061}},
+  {"attributes": {"OID": 21, "Name": "MALAKPET RUB", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.495137873000033, "y": 17.377045666000072}},
+  {"attributes": {"OID": 22, "Name": "CHILKALGUDA RUB", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.512466816000085, "y": 17.434696622000047}},
+  {"attributes": {"OID": 23, "Name": "SHAIKPET NALA", "FolderPath": "MAJOR WATER LOGGING PLACES.kmz/Water logging", "SymbolID": 0, "AltMode": -1, "Base": 0, "Snippet": "", "PopupInfo": "", "HasLabel": -1, "LabelID": 0}, "geometry": {"x": 78.402841165000041, "y": 17.406721560000051}}
+ ]
+}

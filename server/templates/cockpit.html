@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroShield Intelligence - Floating Cockpit</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background-color: #07090e;
+            font-family: 'Inter', sans-serif;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(13, 17, 23, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .metric-value { font-family: monospace; }
+        
+        /* Custom scrollbar for dispatch drawer */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.4); }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- MAP CONTAINER -->
+    <div id="map"></div>
+
+    <!-- HEADER / TOP BAR -->
+    <div class="fixed top-3 left-1/2 transform -translate-x-1/2 z-20 w-11/12 max-w-5xl glass-panel rounded-full px-6 py-3 flex justify-between items-center shadow-lg">
+        <div class="flex items-center gap-3">
+            <span class="text-xl">🌊</span>
+            <h1 class="text-sm font-bold tracking-widest text-white uppercase">HydroShield Intelligence // C2 Cockpit</h1>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold tracking-wide">
+            <span class="text-gray-400">SECTOR: HYD [17.385, 78.486]</span>
+            <span class="text-emerald-400 flex items-center gap-2">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                LIVE FEED
+            </span>
+        </div>
+    </div>
+
+    <!-- LEFT KPI STRIP -->
+    <div class="fixed top-20 left-4 z-20 flex flex-col gap-3 w-48">
+        <div class="glass-panel rounded-lg p-3 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Critical Zones</div>
+            <div class="text-2xl font-bold text-red-500 metric-value" id="kpi-critical">0</div>
+        </div>
+        <div class="glass-panel rounded-lg p-3 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Moderate Zones</div>
+            <div class="text-2xl font-bold text-amber-500 metric-value" id="kpi-moderate">0</div>
+        </div>
+        <div class="glass-panel rounded-lg p-3 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surge Intensity</div>
+            <div class="text-2xl font-bold text-cyan-400 metric-value"><span id="kpi-surge">190</span><span class="text-xs text-gray-500 ml-1">mm/h</span></div>
+        </div>
+        <div class="glass-panel rounded-lg p-3 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Est. Inundation</div>
+            <div class="text-2xl font-bold text-emerald-400 metric-value" id="kpi-eta">>12h</div>
+        </div>
+    </div>
+
+    <!-- BOTTOM CONTROL DOCK -->
+    <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-20 w-11/12 max-w-4xl glass-panel rounded-2xl p-4 shadow-2xl flex items-center justify-between gap-6">
+        <div class="flex-1">
+            <label class="block text-xs text-gray-400 uppercase tracking-wider mb-2">Precipitation Scenario (mm/hr): <span id="rain-val" class="text-cyan-400 font-bold">190</span></label>
+            <input type="range" id="rain-slider" min="0" max="250" step="5" value="190" class="w-full accent-cyan-500">
+        </div>
+        <div class="w-64">
+            <label class="block text-xs text-gray-400 uppercase tracking-wider mb-2">Hydrological Model</label>
+            <select class="w-full bg-gray-800 border border-gray-700 text-sm rounded px-3 py-2 focus:outline-none focus:border-cyan-500">
+                <option>Coupled XGBoost + Rational</option>
+                <option>XGBoost Only</option>
+            </select>
+        </div>
+        <div>
+            <button id="btn-simulate" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-sm uppercase tracking-wider py-3 px-6 rounded-lg transition-colors shadow-[0_0_15px_rgba(8,145,178,0.5)]">
+                ⚡ Execute Inference
+            </button>
+        </div>
+    </div>
+
+    <!-- RIGHT DISPATCH DRAWER -->
+    <div class="fixed top-20 right-4 z-20 w-80 flex flex-col gap-3" style="max-height: calc(100vh - 180px);">
+        <div class="glass-panel rounded-t-xl p-3 border-b border-gray-700/50 flex justify-between items-center shadow-lg">
+            <span class="text-xs font-bold uppercase tracking-widest text-white">Priority Dispatch</span>
+            <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/30" id="dispatch-count">0 ALERTS</span>
+        </div>
+        <div class="glass-panel flex-1 p-2 overflow-y-auto space-y-2 shadow-lg rounded-b-xl" id="dispatch-queue">
+            <div class="text-center p-4 text-xs text-gray-500">All sectors nominal. Awaiting inference.</div>
+        </div>
+        
+        <button id="btn-route" class="glass-panel hover:bg-gray-800 text-emerald-400 font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-colors shadow-lg border border-emerald-500/30 mt-2 flex justify-center items-center gap-2">
+            <span>🚑 Generate Safe Route</span>
+        </button>
+    </div>
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="toast" class="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 glass-panel px-6 py-3 rounded-lg shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-3 border-cyan-500/30 text-sm font-semibold">
+        <span id="toast-icon">✅</span>
+        <span id="toast-msg">Success</span>
+    </div>
+
+
+    <script>
+        // Init Map
+        const map = L.map('map', {
+            zoomControl: false,
+            attributionControl: false
+        }).setView([17.3850, 78.4867], 12);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19,
+            subdomains: 'abcd'
+        }).addTo(map);
+
+        map.fitBounds([[17.30, 78.35], [17.48, 78.55]]);
+
+        // Layers
+        let gridLayer = null;
+        let routeLayer = null;
+
+        // UI Elements
+        const slider = document.getElementById('rain-slider');
+        const rainVal = document.getElementById('rain-val');
+        const btnSimulate = document.getElementById('btn-simulate');
+        const btnRoute = document.getElementById('btn-route');
+        
+        const kpiCritical = document.getElementById('kpi-critical');
+        const kpiModerate = document.getElementById('kpi-moderate');
+        const kpiSurge = document.getElementById('kpi-surge');
+        const kpiEta = document.getElementById('kpi-eta');
+        
+        const dispatchQueue = document.getElementById('dispatch-queue');
+        const dispatchCount = document.getElementById('dispatch-count');
+        const toast = document.getElementById('toast');
+
+        // Helpers
+        function showToast(msg, isError=false) {
+            document.getElementById('toast-msg').innerText = msg;
+            document.getElementById('toast-icon').innerText = isError ? '⚠️' : '✅';
+            toast.style.borderColor = isError ? 'rgba(239, 68, 68, 0.3)' : 'rgba(6, 182, 212, 0.3)';
+            toast.classList.remove('opacity-0');
+            setTimeout(() => toast.classList.add('opacity-0'), 3000);
+        }
+
+        function getRiskStyle(level) {
+            if(level === 'HIGH') return { fillColor: '#ef4444', color: '#ef4444', fillOpacity: 0.5, weight: 1 }; // Red-500
+            if(level === 'MEDIUM') return { fillColor: '#f59e0b', color: '#f59e0b', fillOpacity: 0.4, weight: 1 }; // Amber-500
+            return { fillColor: '#22d3ee', color: '#22d3ee', fillOpacity: 0.1, weight: 1 }; // Cyan-400
+        }
+
+        // Event Listeners
+        slider.addEventListener('input', (e) => {
+            rainVal.innerText = e.target.value;
+            kpiSurge.innerText = e.target.value;
+        });
+
+        btnSimulate.addEventListener('click', async () => {
+            const mm = parseFloat(slider.value);
+            const originalText = btnSimulate.innerText;
+            btnSimulate.innerText = '⏳ COMPUTING...';
+            btnSimulate.disabled = true;
+
+            try {
+                const res = await fetch('/api/v1/simulate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ rainfall_scenario_mm: mm })
+                });
+                if(!res.ok) throw new Error('API Error');
+                const data = await res.json();
+                
+                // Update KPIs
+                kpiCritical.innerText = data.critical_cells_count || 0;
+                kpiModerate.innerText = data.medium_cells_count || 0;
+                
+                let eta = ">12h";
+                if(data.alerts && data.alerts.length > 0) {
+                    const valid_ttfs = data.alerts.map(a => a.time_to_flood_hrs).filter(t => t != null);
+                    if(valid_ttfs.length > 0) {
+                        eta = Math.min(...valid_ttfs).toFixed(1) + 'h';
+                    }
+                }
+                kpiEta.innerText = eta;
+                kpiEta.className = `text-2xl font-bold metric-value ${data.critical_cells_count > 0 ? 'text-red-500' : (data.medium_cells_count > 0 ? 'text-amber-500' : 'text-emerald-400')}`;
+
+                // Update Map
+                if(gridLayer) map.removeLayer(gridLayer);
+                if(data.grid_geojson) {
+                    gridLayer = L.geoJSON(data.grid_geojson, {
+                        style: (feature) => getRiskStyle(feature.properties.alert_level || 'LOW'),
+                        onEachFeature: (feature, layer) => {
+                            const p = feature.properties;
+                            layer.bindPopup(`
+                                <div class="text-gray-800 font-sans text-sm">
+                                    <strong class="block mb-1 text-base text-gray-900 border-b pb-1">Cell: ${p.cell_id}</strong>
+                                    <div><b>Risk:</b> ${parseFloat(p.risk_score || 0).toFixed(2)}</div>
+                                    <div><b>Depth:</b> ${parseFloat(p.depth_cm || 0).toFixed(1)} cm</div>
+                                    <div><b>ETA:</b> ${parseFloat(p.eta_minutes || 0).toFixed(0)} min</div>
+                                </div>
+                            `);
+                        }
+                    }).addTo(map);
+                }
+
+                // Update Dispatch Queue
+                let alerts = [];
+                if(data.grid_geojson && data.grid_geojson.features) {
+                    alerts = data.grid_geojson.features
+                        .map(f => f.properties)
+                        .filter(p => p.alert_level === 'HIGH' || p.alert_level === 'MEDIUM')
+                        .sort((a,b) => (a.time_to_flood_hrs || 999) - (b.time_to_flood_hrs || 999));
+                }
+                
+                dispatchCount.innerText = `${alerts.length} ALERTS`;
+                dispatchCount.className = `text-[10px] px-2 py-0.5 rounded border ${alerts.length > 0 ? 'bg-red-500/20 text-red-400 border-red-500/30' : 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'}`;
+
+                if(alerts.length === 0) {
+                    dispatchQueue.innerHTML = `<div class="text-center p-4 text-xs text-gray-500">All sectors nominal.</div>`;
+                } else {
+                    dispatchQueue.innerHTML = alerts.map(p => {
+                        const isHigh = p.alert_level === 'HIGH';
+                        const colorClass = isHigh ? 'text-red-400' : 'text-amber-400';
+                        const bgClass = isHigh ? 'bg-red-500/10 border-red-500/20' : 'bg-amber-500/10 border-amber-500/20';
+                        const surcharged = p.surcharged;
+                        let action = "MONITOR";
+                        if(surcharged) action = "DEPLOY PUMPS";
+                        else if((p.depth_cm || 0) >= 30) action = "EVACUATE";
+
+                        return `
+                        <div class="p-3 rounded-lg border bg-black/40 ${bgClass} text-xs">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold tracking-wider ${colorClass}">${p.alert_level}</span>
+                                <span class="font-mono text-cyan-400 font-semibold">${p.cell_id}</span>
+                            </div>
+                            <div class="text-gray-300">Depth: ${parseFloat(p.depth_cm || 0).toFixed(1)} cm</div>
+                            <div class="text-gray-300">ETA: ${p.eta_minutes != null ? parseFloat(p.eta_minutes).toFixed(0) + ' min' : 'TBD'}</div>
+                            <div class="mt-2 text-center py-1 rounded bg-black/50 font-bold tracking-wider ${colorClass}">${action}</div>
+                        </div>
+                        `;
+                    }).join('');
+                }
+
+                showToast('Inference complete');
+
+            } catch (err) {
+                console.error(err);
+                showToast('API Error: Inference failed', true);
+            } finally {
+                btnSimulate.innerText = '⚡ Execute Inference';
+                btnSimulate.disabled = false;
+            }
+        });
+
+        btnRoute.addEventListener('click', async () => {
+            const mm = parseFloat(slider.value);
+            const originalText = btnRoute.innerHTML;
+            btnRoute.innerHTML = '<span>⏳ Routing...</span>';
+            btnRoute.disabled = true;
+
+            try {
+                const res = await fetch('/api/v1/safe-route', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        origin_lat: 17.3850, origin_lon: 78.4867,
+                        destination_lat: 17.4060, destination_lon: 78.4950,
+                        current_rainfall_mm: mm
+                    })
+                });
+                if(!res.ok) throw new Error('API Error');
+                const data = await res.json();
+                
+                if(routeLayer) map.removeLayer(routeLayer);
+                
+                if(data.route_geojson) {
+                    routeLayer = L.geoJSON(data.route_geojson, {
+                        style: { color: '#10b981', weight: 4, dashArray: '5, 10', lineCap: 'round' } // emerald-500
+                    }).addTo(map);
+                    map.fitBounds(routeLayer.getBounds(), { padding: [50, 50] });
+                    showToast(`Safe Route Computed: ${(data.safe_route_distance_m/1000).toFixed(1)} km`);
+                }
+
+            } catch(err) {
+                console.error(err);
+                showToast('Failed to compute route', true);
+            } finally {
+                btnRoute.innerHTML = originalText;
+                btnRoute.disabled = false;
+            }
+        });
+
+        // Trigger initial load
+        setTimeout(() => btnSimulate.click(), 500);
+
+    </script>
+</body>
+</html>
